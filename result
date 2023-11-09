@@ -1,0 +1,74 @@
+Chatbot: Summary:
+
+This lecture PDF from Johns Hopkins Engineering's course on Computer Vision covers "Uncalibrated Binocular Stereo and Multi-View Geometry." The focus is on estimating 3D structure from multiple images taken with cameras whose intrinsic parameters are unknown or uncalibrated.
+
+Key topics and concepts discussed include:
+- Epipolar Geometry: This is the geometry of stereo vision, where two cameras view a 3D scene. The lecture explains epipolar lines, epipoles, and the epipolar constraint (pages 14-17, 31-33).
+- Essential Matrix (E): A matrix that relates corresponding points in stereo images (pages 24-25, 47).
+- Fundamental Matrix (F): Similar to the Essential Matrix, it relates points in stereo images but does not require known camera parameters (pages 28-29, 34-37).
+- Stereo Self-Calibration: A process for estimating the relative position and orientation of two cameras based on their captured images (pages 41-42, 43-46).
+- Computing Depth: Given the intrinsic parameters, the lecture shows how to calculate the depth of points in a scene using triangulation (pages 49-55, 56).
+- Multiview Reconstruction: Extending the techniques to more than two views to reconstruct 3D scenes (pages 57-59, 60).
+
+The lecture provides mathematical foundations and equations for these concepts, along with examples and procedures for calibration and depth computation. It also discusses the use of least squares solutions, bundle adjustment, and singular value decomposition (SVD) in the context of stereo vision and 3D reconstruction (pages 61, 62, 56-57).
+
+Relevant pages for parts of the summary:
+- Epipolar Geometry: pages 14-17, 31-33
+- Essential and Fundamental Matrices: pages 24-29, 34-37
+- Stereo Self-Calibration: pages 41-46
+- Computing Depth: pages 49-56
+- Multiview Reconstruction: pages 57-60
+
+The PDF also includes references to textbooks and papers for further reading (pages 63-64), image credits (page 65), and copyright information (page 66).
+None
+
+-------------
+
+    prompt = "Create flash cards for the definitions and potential quiz problem you see; you should produce each flash card in the following style:\n Question={}\n Answer={}\n ppt_page={}\n\n"
+
+
+
+/Users/xhwang/programming/jhu_club/hopAI/workshop-1115/venv/bin/python /Users/xhwang/programming/jhu_club/hopAI/workshop-1115/pdf_reader.py
+/Users/xhwang/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:34: NotOpenSSLWarning: urllib3 v2.0 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Chatbot: Flashcard Creation:
+
+**Flashcard 1: Definition of Uncalibrated Binocular Stereo**
+Question={"What is Uncalibrated Binocular Stereo?"}
+Answer={"Uncalibrated Binocular Stereo is a method to estimate 3D structure from two or more arbitrary images of a scene captured with cameras whose intrinsic parameters may be unknown."}
+ppt_page={"1, 20, 40"}
+
+**Flashcard 2: Essential and Fundamental Matrix**
+Question={"What are the Essential and Fundamental Matrices in the context of Uncalibrated Binocular Stereo?"}
+Answer={"The Essential Matrix relates the position of a scene point in one camera's coordinate system to another's, considering camera rotation and translation. The Fundamental Matrix relates corresponding points on stereo images without requiring knowledge of camera intrinsics or extrinsics."}
+ppt_page={"24, 29"}
+
+**Flashcard 3: Epipolar Geometry**
+Question={"What is Epipolar Geometry in stereo vision?"}
+Answer={"Epipolar Geometry is the intrinsic projective geometry between two views. It includes concepts such as epipoles, epipolar lines, and the epipolar plane, which are fundamental to understanding image correspondence in stereo vision."}
+ppt_page={"14, 15, 16"}
+
+**Flashcard 4: Stereo Self-Calibration**
+Question={"What is Stereo Self-Calibration?"}
+Answer={"Stereo Self-Calibration is the process of determining the intrinsic camera parameters and relative orientation and position of stereo cameras using image correspondences and epipolar constraints."}
+ppt_page={"40, 42"}
+
+**Flashcard 5: Computing Depth in Stereo Vision**
+Question={"What are the steps to compute depth in stereo vision?"}
+Answer={"To compute depth in stereo vision, first assume camera intrinsic parameters are known, then find the relative camera position and orientation from the images, establish correspondences for each pixel, and finally, compute depth for each pixel using triangulation."}
+ppt_page={"41, 52, 53"}
+
+**Flashcard 6: Epipolar Constraint**
+Question={"What is the Epipolar Constraint in stereo vision?"}
+Answer={"The Epipolar Constraint states that for a given point in one image, its corresponding point in the other image must lie on the corresponding epipolar line. This constraint simplifies the search for corresponding points from two dimensions to one."}
+ppt_page={"17, 21"}
+
+**Quiz Problem: Fundamental Matrix Example**
+Question={"Given the Fundamental matrix F=[-0.003, -0.028, 13.19; -0.003, -0.008, -29.2; 2.97, 56.38, -9999] and the left image point 𝒖=[343, 221, 1]T, what is the equation of the epipolar line in the right image?"}
+Answer={"The equation of the epipolar line in the right image is 0.03𝑢" + 0.99𝑣" - 265 = 0."}
+ppt_page={"34"}
+
+Please note that the above flashcards are based on the text extracted from the provided pages, and some assumptions had to be made regarding the structure of the content on pages due to the fragmented nature of the text.
+None
+
+Process finished with exit code 0
