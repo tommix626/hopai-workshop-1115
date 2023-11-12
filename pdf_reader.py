@@ -24,7 +24,7 @@ if __name__ == '__main__':
     for page_number, text in enumerate(pdf_text, start=1):
         prompt += "page"+ str(page_number) + " text:" + text + "\n"
     # print(prompt)
-    api_key = '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'
+    api_key = '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'
     gpt = CLS_GPTBot(api_key)
     response = gpt.query(prompt)
     print(response)
